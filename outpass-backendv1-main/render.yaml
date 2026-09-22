@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: springboot-backend
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DATABASE_URL
+        value: jdbc:postgresql://dpg-d487kv1r0fns73fsjpjg-a:5432/outpass_db
+      - key: DATABASE_USER
+        value: outpass_db_user
+      - key: DATABASE_PASSWORD
+        value: sngUgzVox2Kn2nYy6sGQT9AzIn7fxG1m
+      - key: APP_JWT_SECRET
+        value: any_random_secret_key_here
